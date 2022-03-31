@@ -1,0 +1,72 @@
+﻿@model IEnumerable<AspTask2_FormTask.Entities.User>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+
+    <style>
+        body{
+            background-color:deepskyblue;
+            text-align:center;
+        }
+
+        button {
+            text-align: center;
+            font-size: 3em;
+            color: white;
+            font-weight:500;
+            background-color:orange;
+        }
+
+        .show_div{
+            background-color:white;
+            width:150px;
+            border: solid black 2px;
+            border-radius:10px;
+            display:block;
+            text-align:center;
+            margin-top:10px;
+            margin-left:870px;
+            cursor:pointer;
+            transition-duration:1s;
+        }
+
+        
+
+        .show_div > img{
+            width:100px;
+            height:100px;
+        }
+
+
+        .show_div > h2{
+            color:black;
+            font-size:1.3em;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <button>Add users</button>
+    @foreach (var item in Model)
+    {
+        <div onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'" class="show_div">
+            <img src="@Url.Content(item.ImagePath)" />
+            <h2>@item.Name</h2>
+            <h2>@item.Surname</h2>
+            <h2>@item.Age</h2>
+        </div>
+    }
+
+</body>
+</html>
