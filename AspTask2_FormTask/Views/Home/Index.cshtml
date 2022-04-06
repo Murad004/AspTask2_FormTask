@@ -57,11 +57,11 @@
 
 </head>
 <body>
-    <button>Add users</button>
+    <a asp-controller="Form" asp-action="Add">Add users</a>
     @foreach (var item in Model)
     {
         <div onmouseover="this.style.backgroundColor='skyblue'" onmouseout="this.style.backgroundColor='white'" class="show_div">
-            <img src="@Url.Content(item.ImagePath)" />
+            <img src=@item.ImageUrl />
             <h2>@item.Name</h2>
             <h2>@item.Surname</h2>
             <h2>@item.Age</h2>

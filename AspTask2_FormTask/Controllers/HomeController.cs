@@ -1,4 +1,7 @@
 ﻿using AspTask2_FormTask.Entities;
+using AspTask2_FormTask.FakeRepo;
+using AspTask2_FormTask.Helpers;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,31 +14,19 @@ namespace AspTask2_FormTask.Controllers
     {
 
 
-        public List<User> users = new List<User>
-        {
-            new User
-            {
-                Id=1,Name="Murad",Surname="Sadikhov",Age=18,ImagePath="~/Image/user.png"
-            },
-            new User
-            {
-                Id=2,Name="Cavid",Surname="Mahsumov",Age=16,ImagePath="~/Image/user.png"
-            },
-            new User
-            {
-                Id=3,Name="Elxan",Surname="Atayev",Age=16,ImagePath="~/Image/user.png"
-            },
-            new User
-            {
-                Id=4,Name="Kamran",Surname="Aliyev",Age=22,ImagePath="~/Image/user.png"
-            },
-        };
+
+
+
+
+
+
+
 
         public IActionResult Index()
         {
             
 
-            return View(users);
+            return View(ClassHelper.UserRepo.users);
         }
 
 
