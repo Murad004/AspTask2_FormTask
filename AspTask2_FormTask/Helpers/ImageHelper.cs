@@ -19,7 +19,7 @@ namespace AspTask2_FormTask.Helpers
 
         public async Task<string> SaveFile(IFormFile file)
         {
-            var saveimg = Path.Combine(_webhost.WebRootPath, "images", file.FileName);
+            var saveimg = Path.Combine(_webhost.WebRootPath, "Image", file.FileName);
             //string imgText = Path.GetExtension(file.FileName);
             using (var img = new FileStream(saveimg, FileMode.Create))
             {

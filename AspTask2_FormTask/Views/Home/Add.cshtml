@@ -1,0 +1,42 @@
+﻿@model AspTask2_FormTask.Models.UserViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+
+    <style>
+        input {
+            font-size: 3em;
+        }
+
+        a {
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+
+    <form style="font-size:3em;" asp-controller="Home" asp asp-action="Add" enctype="multipart/form-data">
+        Id : <input asp-for="@Model.User.Id" />
+        <br />
+        Name : <input asp-for="@Model.User.Name" />
+        <br />
+        Surname : <input asp-for="@Model.User.Surname" />
+        <br />
+        Age : <input asp-for="@Model.User.Age" />
+        <br />
+        Images : <input asp-for="@Model.User.ImageUrl" />
+        <input type="file" asp-for="@Model.File" />
+        <button style="font-size:3em;" id="submit" type="submit"> Register </button>
+    </form>
+
+
+</body>
+</html>
